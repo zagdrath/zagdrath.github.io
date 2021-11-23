@@ -1,0 +1,40 @@
+.header {
+  color: #3c3836;
+  font-size: 20px;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+  background-color: #ebdbb2;
+}
+
+ul {
+  color: #3c3836;
+}
+
+li {
+  color: #3c3836;
+}
+
+a {
+  color: #cc241d;
+}
+
+h2 {
+  color: #3c3836;
+}
+
+p {
+  color: #3c3836;
+}
+
+.footer {
+  position: fixed;
+  left: 10px;
+  bottom: 5px;
+  right: 10px; 
+  background-color: #bdae93;
+  color: #3c3836;
+  text-align: center;
+  }
