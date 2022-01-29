@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[937],{5910:function(e,t,l){l.r(t);var n=l(7294),r=l(5414);t.default=function(){return n.createElement("body",null,n.createElement(r.q,null,n.createElement("title",null,"Zagdrath"),n.createElement("meta",{charset:"UTF-8"})))}}}]);
+//# sourceMappingURL=component---src-pages-landscape-js-326847ccdf42044c2c08.js.map
