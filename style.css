@@ -11,6 +11,18 @@ a {
     text-decoration: none;
 }
 
+sup {
+    vertical-align: 0;
+    position: relative;
+    bottom: 1ex;
+}
+
+sub {
+    vertical-align: 0;
+    position: relative;
+    top: 0.8ex;
+}
+
 .headbox {
     border: groove;
     border-width: 2px;
