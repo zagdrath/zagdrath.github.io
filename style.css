@@ -1,0 +1,66 @@
+* {
+    line-height: 1.1;
+}
+
+body {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.headbox {
+    border: groove;
+    border-width: 2px;
+    background: #f0f0e0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5px;
+}
+
+.headbox p {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+.headbox h1 {
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+}
+
+.headbox h2 {
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+}
+
+.squat p {
+    margin-top: 0.25em;
+    margin-bottom: 0.15em;
+}
+
+.squat ul {
+    margin-top: 0.25em;
+    margin-bottom: 0.15em;
+}
+
+.squat h2 {
+    margin-top: 0.4em;
+    margin-bottom: 0.25em;
+}
+
+.squat h3 {
+    margin-top: 0.3em;
+    margin-bottom: 0.2em;
+}
+
+.squat h4 {
+    margin-top: 0.2em;
+    margin-bottom: 0.15em;
+}
+
+.squat h5 {
+    margin-top: 0.17em;
+    margin-bottom: 0.15em;
+}
