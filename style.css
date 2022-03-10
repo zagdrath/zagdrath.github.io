@@ -32,47 +32,47 @@ sub {
     padding-left: 5px;
 }
 
-.headbox p {
+p.headbox {
     margin-top: 0.8em;
     margin-bottom: 0.8em;
 }
 
-.headbox h1 {
+h1.headbox {
     margin-top: 0.2em;
     margin-bottom: 0.4em;
 }
 
-.headbox h2 {
+h2.headbox {
     margin-top: 0.2em;
     margin-bottom: 0.4em;
 }
 
-.squat p {
+p.squat {
     margin-top: 0.25em;
     margin-bottom: 0.15em;
 }
 
-.squat ul {
+ul.squat {
     margin-top: 0.25em;
     margin-bottom: 0.15em;
 }
 
-.squat h2 {
+h2.squat {
     margin-top: 0.4em;
     margin-bottom: 0.25em;
 }
 
-.squat h3 {
+h3.squat {
     margin-top: 0.3em;
     margin-bottom: 0.2em;
 }
 
-.squat h4 {
+h4.squat {
     margin-top: 0.2em;
     margin-bottom: 0.15em;
 }
 
-.squat h5 {
+h5.squat {
     margin-top: 0.17em;
     margin-bottom: 0.15em;
 }
