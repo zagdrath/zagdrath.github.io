@@ -216,9 +216,9 @@
                 <p class="squat">
                     <strong>Standard Crystal</strong><br>
                     <strong>Frequency: </strong>10 Mhz.<br>
-                    <strong>Aging rate: </strong>&lt;3 &times; 10<sup>-7</sup> per month.<br>
-                    <strong>Temperature: </strong>&lt;5 &times; 10<sup>-6</sup> to 50&deg;C.<br>
-                    <strong>Line voltage: </strong>&lt;1 &times; 10<sup>-7</sup> for 10 % change.<br>
+                    <strong>Aging rate: </strong>&lt;3 &times; 10<sup>&minus;7</sup> per month.<br>
+                    <strong>Temperature: </strong>&lt;5 &times; 10<sup>&minus;6</sup> to 50&deg;C.<br>
+                    <strong>Line voltage: </strong>&lt;1 &times; 10<sup>&minus;7</sup> for 10 % change.<br>
                     <strong>External input: </strong>rear panel BNC accepts 10 MHz, 500 mV to 5 V rms.<br>
                     <strong>Time base output: </strong>10 MHz, &gt;500 mV rms sine wave into 50 &ohm; via rear panel.<br>
                     <strong>Gate time range: </strong>1 ms to 99.999 seconds in 1 ms increments.<br>
@@ -226,7 +226,37 @@
                 <h3 class="squat">Math</h3>
                 <p class="squat">
                     <strong class="indent">Display = </strong>(Measurement/Normalize) &plus; Offset.<br>
-                    <strong class="indent">Entry range: </strong>&pm; 1 &times; 10<sup>-10</sup> to &pm; 9.99999999999 &times; 10<sup>9</sup>.<br>
+                    <strong class="indent">Entry range: </strong>&pm; 1 &times; 10<sup>&minus;10</sup> to &pm; 9.99999999999 &times; 10<sup>9</sup>.<br>
+                    <strong>Single cycle: </strong>when enabled, one measurement is taken with each push of RESET key.<br>
+                    <strong>100 gate average: </strong>100 gates accumulated and average displayed.<br>
+                    <strong>Gate output: </strong> rear panel BNC drives TTL levels into 1 k&ohm;.<br>
+                </p>
+                <h3 class="squat">Hewlett-Packard Interface Bus</h3>
+                <p class="squat">
+                    <strong>Programmable controls: </strong>all front panel controls and functions, expect Option 030 Channel C sensitivity and power on/stby switch.<br>
+                    <strong>Trigger Level: </strong>set Channel A or B from &minus;5.1 V to &plus;5.1 V in 20 mV steps (&times; ATTN).<br>
+                    <strong>Other: </strong>Initialize, Transmit Error, High-Speed Output, Transmit Calibration Data, Device ID, and SRQ Mask.<br>
+                    <strong>Data Output</strong><br>
+                    <strong class="indent">Normal operation: </strong>format: 19 characters plus CR and LF. Rate: Ten readings/second.<br>
+                    <strong class="indent">High speed output mode: </strong>format: 8 bytes of count data and Interpolator Start and Stop counts. Rate: 150 readings/second.
+                </p>
+                <h3 class="squat">Options</h3>
+                <p class="squat">
+                    <strong>Option 010 High Stability Time Base (Oven)</strong><br>
+                    <strong>Frequency: </strong>10 MHz.<br>
+                    <strong>Aging rate: </strong>&lt;5 &times; 10<sup>&minus;10</sup>/day after 24-hour warm up.<br>
+                    <strong>Short term: </strong>&lt;5 &times; 10<sup>&minus;10</sup> rms for a 1-second average.<br>
+                    <strong>Temperature: </strong>&lt;7 &times; 10<sup>&minus;9</sup>, 0 to 50&deg;C.
+                    <strong>Line voltage: </strong>&lt;5 &times; 10<sup>&minus;10</sup> for 10% change (2 minutes after change).<br>
+                    <strong>Warm up: </strong>within 5 &times; 10<sup>&minus;9</sup> of final value in 20 minutes.<br>
+                    <strong>Option 020 DC Digital Voltmeter</strong><br>
+                    <strong>Range: </strong>4 digits, autoranging, and autopolarity in &pm; 10 V, &pm; 100 V, &pm; 1000 V ranges.<br>
+                    <strong>Sensitivity and LSD: </strong> 100 &micro;V for &pm; 1 V reading. 1 mV for &pm; 10 V reading. 10 mV for &pm; 100 V reading. 100 mV for &pm; 1000 V reading.<br>
+                    <strong>Input type: </strong>floating pair.<br>
+                    <strong>Input resistance: </strong>10 M&ohm; &pm; 1%.<br>
+                    <strong>Option 030 1300 MHz C Channel</strong><br>
+                    <strong>Range: </strong>90 MHz to 1300 MHz.<br>
+                    <strong>Sensitivity: </strong> 15 mV rms (&minus;23.5 dBm) sine wave, 90 MHz to 1000 MHz. 75 mV rms (&minus;9.5 dBm) sine wave, 1000 MHz to 1300 Mhz.
                 </p>
             </td>
         </tr>
