@@ -7,6 +7,11 @@ body {
     margin-right: 3%;
 }
 
+table {
+    padding: 0;
+    border-spacing: 0;
+}
+
 a {
     text-decoration: none;
 }
