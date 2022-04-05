@@ -23,6 +23,10 @@ sub {
     top: 0.8ex;
 }
 
+.tab {
+    text-indent: 20px;
+}
+
 .headbox {
     border: groove;
     border-width: 2px;
