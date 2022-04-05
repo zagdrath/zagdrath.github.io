@@ -27,6 +27,10 @@ sub {
     text-indent: 20px;
 }
 
+.indent {
+    margin-left: 20px;
+}
+
 .headbox {
     border: groove;
     border-width: 2px;
