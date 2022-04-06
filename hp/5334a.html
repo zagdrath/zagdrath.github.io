@@ -19,280 +19,278 @@
         </table>
     </div>
 
-    <table style="max-width: 100%;">
-        <tr>
-            <td class="bruh" style="width: 500px; vertical-align: top;">
-                <ul class="squat">
-                    <li>Two matched 100 MHz channels; optional 1.3 GHz channel C</li>
-                    <li>9 digits per second resolution over the entire frequency range in one second</li>
-                    <li>2 ns single shot time interval resolution</li>
-                </ul>
-            </td>
-            <td style="width: 25px;"></td>
-            <td class="bruh" style="width: 500px; vertical-align: top;">
+    <div class="parent">
+        <div class="div1">
+            <ul class="squat">
+                <li>Two matched 100 MHz channels; optional 1.3 GHz channel C</li>
+                <li>9 digits per second resolution over the entire frequency range in one second</li>
+                <li>2 ns single shot time interval resolution</li>
+            </ul>
+        </div>
+        <div class="div2">
+            <ul class="squat">
                 <li>Automatic rise / fall time, pulse width and peak amplitude measurements</li>
                 <li>Store / recall of up to 10 front panel setups</li>
                 <li>Complete HP-IB programmability including trigger levels</li>
-            </td>
-        </tr>
-    </table>
+            </ul>
+        </div>
+    </div>
+
     <img src="../images/5334a.png" alt="HP 5334A Universal Counter" style="max-width: 100%;">
-    <table style="max-width: 100%;">
-        <tr>
-            <td class="bruh" style="width: 500px; vertical-align: top;">
-                <p class="squat tab">
-                    The 5334A is a two-channel, 100 MHz Universal Counter with 9 digits in one
-                    second resolution and 2 ns single shot time interval resolution. Frequency,
-                    period, rise time, fall time, pulse width and peak amplitude may be measured
-                    automatically&mdash;all at the touch of a button. Options include a high-stability
-                    oven oscillator, a &plus; / &minus; 1000 V DVM and a 1.3 GHz C-Channel.
-                </p>
-                <h3 class="squat">Fully Programmable</h3>
-                <p class="squat tab">
-                    Complete HP-IB capability standard is a first for counters in this class, opening up new
-                    possibilities for ATE applications. All front panel controls are programmable including 
-                    input signal conditioning and trigger levels. Optional rear terminal inputs simplify cabling
-                    in rack-mounted systems.
-                </p>
-                <h3 class="squat">Peak Amplitudes</h3>
-                <p class="squat tab">
-                    The peak amplitude function adds a new dimension to to universal counter applications.
-                    For any waveshape up to 20 MHz, the 5334A measures not only time and frequency, but also
-                    the maximum and minimum peak amplitudes of Channel A or B input signals. Often this function
-                    reduces the need for additional test equipment and gives a more complete picture of the input signal.
-                </p>
-                <h3 class="squat">Input Signal Conditioning</h3>
-                <p class="squat tab">
-                    In addition to automatic capability, independent selection of input signal conditioning provides
-                    flexibility for any application. Accurate triggering is ensured by selection of trigger slope,
-                    coupling, input impedance, attenuation, low pass filter, and variable sensitivity. Variable 
-                    sensitivity may be used to widen the hysteresis band for measurements on noisy input signals. 
-                </p>
-                <h3 class="squat">Triggering Alternatives</h3>
-                <p class="squat tab">
-                    The 5334A offers four alternatives for trigger level selection. Auto Trigger offers maximum
-                    convenience. The maximum and minimum peaks of the input signal are found automatically, and the
-                    optimium trigger point calculated. Auto Attenuator is enabled with Auto Trigger, ensuring correct
-                    counting by selecting the X10 attenuator when the input signal amplitude is greater than the input
-                    signal operating range.
-                </p>
-                <p class="squat tab">
-                    The trigger levels may also be set manually over the range of &minus;5.10 V to &plus;5.10 V (&minus;51.0 V to &plus;51.0V 
-                    in X10 attenuation). Read Levels may be used to display the current trigger level control settings.
-                    Storing trigger levels from the front panel and programming trigger levels over HP-IB complete the 
-                    alternatives for reliable and accurate triggering.
-                </p>
-                <h3 class="squat">External Arm</h3>
-                <p class="squat">
-                    <strong>Minimum width: </strong>50 ns.<br>
-                    <strong>Maximum transition time: </strong>1 &micro;S.<br>
-                    <strong>Sensitivity: </strong>500 mV peak-to-peak.<br>
-                    <strong>Signal operating range: </strong>&minus;5 Vdc to &plus;5 Vdc.<br>
-                    <strong>Slope: </strong>independent selection of START and STOP ARM slopes: &plus;, &minus;, or OFF.
-                </p>
-                <h3 class="squat">Frequency A and Frequency B</h3>
-                <p class="squat">
-                    <strong>Range: </strong>.001 Hz to 100 MHz.<br>
-                    <strong>LSD: </strong>(4 ns / Gate Time) &times; FREQ.<br>
-                    <strong>Resolution</strong><br>
-                    <img src="../images/res1.png" alt="" width="350px"><br>
-                    <strong>Accuracy: </strong>&pm; Resolution &pm; Time Base Error &times; FREQ.<br>
-                </p>
-                <h3 class="squat">Period A</h3>
-                <p class="squat">
-                    <strong>Range: </strong>10 ns to 10<sup>3</sup> seconds.<br>
-                    <strong>LSD: </strong>(4 ns / Gate Time) &times; PER.<br>
-                    <strong>Resolution</strong><br>
-                    <img src="../images/res2.png" alt="" width="350px"><br>
-                    <strong>Accuracy: </strong>&pm; Resolution &pm; Time Base Error &times; PER.<br>
-                </p>
-                <h3 class="squat">Time Interval A to B</h3>
-                <p class="squat">
-                    <strong>Range: </strong>&minus;1 ns to 10<sup>3</sup> seconds.<br>
-                    <strong>LSD: </strong>1 ns (100 ps using 100 GATE AVERAGE).<br>
-                    <strong>Resolution: </strong>&pm; LSD &pm; Start Trigger Error &pm; Stop Trigger Error &pm; 1 ns rms.<br>
-                    <strong>Accuracy: </strong>&pm; Resolution &pm; (Time Base Error &times; TI) &pm; Trigger Level Timing 
-                    Error &pm; Trigger Level Setting Error &pm; 2 ns.<br>
-                </p>
-                <h3 class="squat">Time Interval Delay</h3>
-                <p class="squat">
-                    Used with Time Interval A to B, a selectable delay can be inserted between START (Channel A trigger) 
-                    and STOP (Channel B trigger). Electrical inputs during delay are ignored. Delay Range is 1 ms to 99.999 s (1 ms steps).
-                </p>
-                <h3 class="squat">Ratio A/B</h3>
-                <p class="squat">
-                    <strong>Range:</strong>.001 Hz to 100 MHz both channels.<br>
-                    <strong>LSD: </strong>4 &times; RATIO / (FREQ A &times; Gate Time).<br>
-                    <strong>Resolution and Accuracy</strong><br>
-                    &pm; LSD &pm; (B Trigger Error / Gate Time) &times; RATIO.
-                </p>
-                <h3 class="squat">Totalize A</h3>
-                <p class="squat">
-                    <strong>Range: </strong>0 to 10<sup>12</sup> &minus;1.<br>
-                    <strong>LSD: </strong>1 count of input signal.<br>
-                    <strong>Resolution and Accuracy: </strong>&pm; LSD.<br>
-                </p>
-                <h3 class="squat">Pulse Width A</h3>
-                <p class="squat">
-                    <strong>Range: </strong>5 ns to 10 ms.<br>
-                    <strong>LSD: </strong>1 ns (100 ps using 100 GATE AVRAGE).<br>
-                    <strong>Resolution: </strong>&pm; LSD &pm; Start Trigger Error &pm; Stop Trigger Error &pm; 1 ns rms.<br>
-                </p>
-                <h3 class="squat">Rise / Fall Time A</h3>
-                <p class="squat">
-                    <strong>Range: </strong>30 ns to 10 ms.<br>
-                    <strong>Minimum amplitude: </strong>500 mV peak-to-peak.<br>
-                    <strong>Dynamic range: </strong>500 mV to 40 V peak-to-peak.<br>
-                    <strong>LSD: </strong>1 ns (100 ps using 100 GATE AVERAGE).<br>
-                    <strong>Resolution: </strong>&pm; LSD &pm; Start Trigger Error &pm; Stop Trigger Error &pm; 1 ns rms.<br>
-                </p>
-                <h3 class="squat">Read Peak Amplitudes</h3>
-                <p class="squat">
-                    Maximum and minimum peaks of Channel A or Channel B input are displayed.<br>
-                    <strong>Frequency range: </strong>DC, 100 Hz to 20 MHz.<br>
-                    <strong>Dynamic range: </strong>0 V to 40 V peak-to-peak.<br>
-                    <strong>Resolution: </strong>&times;1: 20 mV. &times;10: 100 mV.
-                </p>
-                <h3 class="squat">Time Base</h3>
-                <p class="squat">
-                    <strong>Standard Crystal</strong><br>
-                    <strong>Frequency: </strong>10 Mhz.<br>
-                    <strong>Aging rate: </strong>&lt;3 &times; 10<sup>&minus;7</sup> per month.<br>
-                    <strong>Temperature: </strong>&lt;5 &times; 10<sup>&minus;6</sup> to 50&deg;C.<br>
-                    <strong>Line voltage: </strong>&lt;1 &times; 10<sup>&minus;7</sup> for 10 % change.<br>
-                    <strong>External input: </strong>rear panel BNC accepts 10 MHz, 500 mV to 5 V rms.<br>
-                    <strong>Time base output: </strong>10 MHz, &gt;500 mV rms sine wave into 50 &ohm; via rear panel.<br>
-                    <strong>Gate time range: </strong>1 ms to 99.999 seconds in 1 ms increments.<br>
-                </p>
-            </td>
-            <td style="width: 25px;"></td>
-            <td class="bruh" style="width: 500px; vertical-align: top;">
-                <h3 class="squat">Store / Recall</h3>
-                <p class="squat tab">
-                    Up to ten instrument setups includding trigger levels may be stored in a nonvolatile memory and 
-                    conveniently recalled. Sequencing through several complicated setups require much less time and
-                    results in repeatable, exact measurement setups.
-                </p>
-                <h3 class="squat">Math</h3>
-                <p class="squat tab">
-                    Math functions let you view results in measurement units of your choice such as velocity, flow,
-                    or ppm. Normalize divides the measured value by a constant. Offset adds or subtracts the measured
-                    value by a constant.
-                </p>
-                <h3 class="squat">External Arming</h3>
-                <p class="squat tab">
-                    Synchronize a measurement to a real time event or events. Start arm is used alone to enable the
-                    start of a measurement, stop arm to enable the stop of a measurement. External gating is acomplished
-                    by arming both the start and stop of a measurement. This capability facilitates applications such as
-                    measuring the frequency within a pulsed RF signal and averaging for increased resolution, selecting a
-                    specific time interval within a pulse train, and selecting a portion of a pulse train to totalize.
-                </p>
-                <p class="squat tab">
-                    The arm input and slope selection are conveniently located on the front panel and are programmable over
-                    HP-IB. The trigger level at which the arm signal will arm a measurement may be selected from &minus;4 V to &plus;4 V
-                    via a rear panel control.
-                </p>
-                <h2 class="squat" style="font-size: 22px;">Condensed Specifications</h2>
-                <h3 class="squat">Input Characteristics (channels A and B)</h3>
-                <p class="squat">
-                    <strong>Range</strong><br>
-                    <strong class="indent">DC coupled: </strong>0 to 100 MHz.<br>
-                    <strong class="indent">AC coupled: </strong>1 M&ohm;, 30 Hz to 100 MHz. 50 &ohm;, 1 MHz to 100 MHz.<br>
-                    <strong>Sensitivity</strong><br>
-                    15 mV rms sine wave to 20 MHz. 35 mV rms sine wave to 100MHz. 100 mV peak-to-peak at a minimum pulse width 
-                    of 5 ns. Sensitivity can be continuously varied to 150 mV rms, (NOMINAL) using the TRIGGER LEVEL/SENS control 
-                    in sensitivity mode. (Trigger levels set to 0 V NOMINAL.)<br>
-                    <strong>Dynamic Range (&times;1)</strong><br>
-                    45 mV to 5 V peak-to-peak, to 20 MHz.<br>
-                    100 mV to 2.5 V peak-to-peak, to 100 MHz.<br>
-                    <strong>Signal operating range, dc: </strong>&pm;5 V DC (&times; ATTN).<br>
-                    <strong>Trigger Level Range</strong><br>
-                    <strong class="indent">Manual (auto trigger off): </strong>continuously adjustable over &pm;5.1 V, displayed 
-                    in 20 mV steps. In &times;10, &pm;51 V displayed in 200 mV steps.<br>
-                    <strong class="indent">Preset: </strong>0 V NOMINAL in Sensitivity Mode.
-                    <strong>Auto Trigger</strong><br>
-                    <strong class="indent">DC coupled: </strong>100 Hz to 100 MHz.<br>
-                    <strong class="indent">AC coupled: </strong>1 M&ohm;, 100 Hz to 100 MHz. 50 &ohm;, 1 MHz to 100 MHz.<br>
-                    <strong>Coupling: </strong>ac or dc, switch selectable.<br>
-                    <strong>Trigger slope: </strong>independent selection of &plus; or &minus; slope.<br>
-                    <strong>Impedance: </strong>1 M&ohm; NOMINAL shunted by &lt;60 pf or 50 &ohm; NOMINAL switch selectable.<br>
-                    <strong>Attenuator</strong><br>
-                    <strong class="indent">Manual: </strong>&times;1 or &times;10 NOMINAL, switch selectable.<br>
-                    <strong class="indent">Auto: </strong> attenuator automatically switched when in Auto Trigger.<br>
-                    <strong>Low pass filter: </strong> 100 kHz NOMINAL, switchable in or out of Channel A.<br>
-                </p>
-                <h3 class="squat">Math</h3>
-                <p class="squat">
-                    <strong class="indent">Display = </strong>(Measurement/Normalize) &plus; Offset.<br>
-                    <strong class="indent">Entry range: </strong>&pm; 1 &times; 10<sup>&minus;10</sup> to &pm; 9.99999999999 &times; 10<sup>9</sup>.<br>
-                    <strong>Single cycle: </strong>when enabled, one measurement is taken with each push of RESET key.<br>
-                    <strong>100 gate average: </strong>100 gates accumulated and average displayed.<br>
-                    <strong>Gate output: </strong> rear panel BNC drives TTL levels into 1 k&ohm;.<br>
-                </p>
-                <h3 class="squat">Hewlett-Packard Interface Bus</h3>
-                <p class="squat">
-                    <strong>Programmable controls: </strong>all front panel controls and functions, expect Option 030 Channel C sensitivity and power on/stby switch.<br>
-                    <strong>Trigger Level: </strong>set Channel A or B from &minus;5.1 V to &plus;5.1 V in 20 mV steps (&times; ATTN).<br>
-                    <strong>Other: </strong>Initialize, Transmit Error, High-Speed Output, Transmit Calibration Data, Device ID, and SRQ Mask.<br>
-                    <strong>Data Output</strong><br>
-                    <strong class="indent">Normal operation: </strong>format: 19 characters plus CR and LF. Rate: Ten readings/second.<br>
-                    <strong class="indent">High speed output mode: </strong>format: 8 bytes of count data and Interpolator Start and Stop counts. Rate: 150 readings/second.
-                </p>
-                <h3 class="squat">Options</h3>
-                <p class="squat">
-                    <strong>Option 010 High Stability Time Base (Oven)</strong><br>
-                    <strong>Frequency: </strong>10 MHz.<br>
-                    <strong>Aging rate: </strong>&lt;5 &times; 10<sup>&minus;10</sup>/day after 24-hour warm up.<br>
-                    <strong>Short term: </strong>&lt;5 &times; 10<sup>&minus;10</sup> rms for a 1-second average.<br>
-                    <strong>Temperature: </strong>&lt;7 &times; 10<sup>&minus;9</sup>, 0 to 50&deg;C.
-                    <strong>Line voltage: </strong>&lt;5 &times; 10<sup>&minus;10</sup> for 10% change (2 minutes after change).<br>
-                    <strong>Warm up: </strong>within 5 &times; 10<sup>&minus;9</sup> of final value in 20 minutes.<br>
-                    <strong>Option 020 DC Digital Voltmeter</strong><br>
-                    <strong>Range: </strong>4 digits, autoranging, and autopolarity in &pm; 10 V, &pm; 100 V, &pm; 1000 V ranges.<br>
-                    <strong>Sensitivity and LSD: </strong> 100 &micro;V for &pm; 1 V reading. 1 mV for &pm; 10 V reading. 10 mV for &pm; 100 V reading. 100 mV for &pm; 1000 V reading.<br>
-                    <strong>Input type: </strong>floating pair.<br>
-                    <strong>Input resistance: </strong>10 M&ohm; &pm; 1%.<br>
-                    <strong>Option 030 1300 MHz C Channel</strong><br>
-                    <strong>Range: </strong>90 MHz to 1300 MHz.<br>
-                    <strong>Sensitivity: </strong> 15 mV rms (&minus;23.5 dBm) sine wave, 90 MHz to 1000 MHz. 75 mV rms (&minus;9.5 dBm) sine wave, 1000 MHz to 1300 Mhz.
-                </p>
-                <table style="max-width: 100%;">
-                    <td width="400px" style="vertical-align: top;">
-                        <h3 class="squat">Ordering Information</h3>
-                        <p class="squat">
-                            <strong>Option 010: </strong>Oven Oscillator<br>
-                            <strong>Option 020: </strong>DVM<br>
-                            <strong>Option 030: </strong>Channel C<br>
-                            <strong>Option 050: </strong>Both option 020 and 030, order instead of both options separately.<br>
-                            <strong>Option 060: </strong>Rear Terminals<br>
-                            Channel A, B and ARM in parallel with front inputs.<br>
-                            Options 020 and 030 at rear panel only.<br>
-                            <strong>Option 908: </strong>Rack Mount Kit for use without front handles.<br>
-                            <strong>Option 913: </strong>Rack Mount Kit for use with supplied front handles.<br>
-                            <h3 class="squat">5334A Universal Counter</h3>
-                        </p>
-                    </td>
-                    <td width="100px" align="right" style="vertical-align: top;">
-                        <h3 class="squat">Prices</h3>
-                        <p class="squat">
-                            $805<br>
-                            $500<br>
-                            $755<br>
-                            $1240<br>
-                            <br>
-                            $100<br>
-                            <br>
-                            <br>
-                            $30<br>
-                            $30<br>
-                            <br>
-                            <h3 class="squat">$2800</h3>
-                        </p>
-                    </td>
-                </table>
-            </td>
-        </tr>
-    </table>
+    
+    <div class="parent">
+        <div class="div1">
+            <p class="squat tab">
+                The 5334A is a two-channel, 100 MHz Universal Counter with 9 digits in one
+                second resolution and 2 ns single shot time interval resolution. Frequency,
+                period, rise time, fall time, pulse width and peak amplitude may be measured
+                automatically&mdash;all at the touch of a button. Options include a high-stability
+                oven oscillator, a &plus; / &minus; 1000 V DVM and a 1.3 GHz C-Channel.
+            </p>
+            <h3 class="squat">Fully Programmable</h3>
+            <p class="squat tab">
+                Complete HP-IB capability standard is a first for counters in this class, opening up new
+                possibilities for ATE applications. All front panel controls are programmable including 
+                input signal conditioning and trigger levels. Optional rear terminal inputs simplify cabling
+                in rack-mounted systems.
+            </p>
+            <h3 class="squat">Peak Amplitudes</h3>
+            <p class="squat tab">
+                The peak amplitude function adds a new dimension to to universal counter applications.
+                For any waveshape up to 20 MHz, the 5334A measures not only time and frequency, but also
+                the maximum and minimum peak amplitudes of Channel A or B input signals. Often this function
+                reduces the need for additional test equipment and gives a more complete picture of the input signal.
+            </p>
+            <h3 class="squat">Input Signal Conditioning</h3>
+            <p class="squat tab">
+                In addition to automatic capability, independent selection of input signal conditioning provides
+                flexibility for any application. Accurate triggering is ensured by selection of trigger slope,
+                coupling, input impedance, attenuation, low pass filter, and variable sensitivity. Variable 
+                sensitivity may be used to widen the hysteresis band for measurements on noisy input signals. 
+            </p>
+            <h3 class="squat">Triggering Alternatives</h3>
+            <p class="squat tab">
+                The 5334A offers four alternatives for trigger level selection. Auto Trigger offers maximum
+                convenience. The maximum and minimum peaks of the input signal are found automatically, and the
+                optimium trigger point calculated. Auto Attenuator is enabled with Auto Trigger, ensuring correct
+                counting by selecting the X10 attenuator when the input signal amplitude is greater than the input
+                signal operating range.
+            </p>
+            <p class="squat tab">
+                The trigger levels may also be set manually over the range of &minus;5.10 V to &plus;5.10 V (&minus;51.0 V to &plus;51.0V 
+                in X10 attenuation). Read Levels may be used to display the current trigger level control settings.
+                Storing trigger levels from the front panel and programming trigger levels over HP-IB complete the 
+                alternatives for reliable and accurate triggering.
+            </p>
+            <h3 class="squat">External Arm</h3>
+            <p class="squat">
+                <strong>Minimum width: </strong>50 ns.<br>
+                <strong>Maximum transition time: </strong>1 &micro;S.<br>
+                <strong>Sensitivity: </strong>500 mV peak-to-peak.<br>
+                <strong>Signal operating range: </strong>&minus;5 Vdc to &plus;5 Vdc.<br>
+                <strong>Slope: </strong>independent selection of START and STOP ARM slopes: &plus;, &minus;, or OFF.
+            </p>
+            <h3 class="squat">Frequency A and Frequency B</h3>
+            <p class="squat">
+                <strong>Range: </strong>.001 Hz to 100 MHz.<br>
+                <strong>LSD: </strong>(4 ns / Gate Time) &times; FREQ.<br>
+                <strong>Resolution</strong><br>
+                <img src="../images/res1.png" alt="" width="350px"><br>
+                <strong>Accuracy: </strong>&pm; Resolution &pm; Time Base Error &times; FREQ.<br>
+            </p>
+            <h3 class="squat">Period A</h3>
+            <p class="squat">
+                <strong>Range: </strong>10 ns to 10<sup>3</sup> seconds.<br>
+                <strong>LSD: </strong>(4 ns / Gate Time) &times; PER.<br>
+                <strong>Resolution</strong><br>
+                <img src="../images/res2.png" alt="" width="350px"><br>
+                <strong>Accuracy: </strong>&pm; Resolution &pm; Time Base Error &times; PER.<br>
+            </p>
+            <h3 class="squat">Time Interval A to B</h3>
+            <p class="squat">
+                <strong>Range: </strong>&minus;1 ns to 10<sup>3</sup> seconds.<br>
+                <strong>LSD: </strong>1 ns (100 ps using 100 GATE AVERAGE).<br>
+                <strong>Resolution: </strong>&pm; LSD &pm; Start Trigger Error &pm; Stop Trigger Error &pm; 1 ns rms.<br>
+                <strong>Accuracy: </strong>&pm; Resolution &pm; (Time Base Error &times; TI) &pm; Trigger Level Timing 
+                Error &pm; Trigger Level Setting Error &pm; 2 ns.<br>
+            </p>
+            <h3 class="squat">Time Interval Delay</h3>
+            <p class="squat">
+                Used with Time Interval A to B, a selectable delay can be inserted between START (Channel A trigger) 
+                and STOP (Channel B trigger). Electrical inputs during delay are ignored. Delay Range is 1 ms to 99.999 s (1 ms steps).
+            </p>
+            <h3 class="squat">Ratio A/B</h3>
+            <p class="squat">
+                <strong>Range:</strong>.001 Hz to 100 MHz both channels.<br>
+                <strong>LSD: </strong>4 &times; RATIO / (FREQ A &times; Gate Time).<br>
+                <strong>Resolution and Accuracy</strong><br>
+                &pm; LSD &pm; (B Trigger Error / Gate Time) &times; RATIO.
+            </p>
+            <h3 class="squat">Totalize A</h3>
+            <p class="squat">
+                <strong>Range: </strong>0 to 10<sup>12</sup> &minus;1.<br>
+                <strong>LSD: </strong>1 count of input signal.<br>
+                <strong>Resolution and Accuracy: </strong>&pm; LSD.<br>
+            </p>
+            <h3 class="squat">Pulse Width A</h3>
+            <p class="squat">
+                <strong>Range: </strong>5 ns to 10 ms.<br>
+                <strong>LSD: </strong>1 ns (100 ps using 100 GATE AVRAGE).<br>
+                <strong>Resolution: </strong>&pm; LSD &pm; Start Trigger Error &pm; Stop Trigger Error &pm; 1 ns rms.<br>
+            </p>
+            <h3 class="squat">Rise / Fall Time A</h3>
+            <p class="squat">
+                <strong>Range: </strong>30 ns to 10 ms.<br>
+                <strong>Minimum amplitude: </strong>500 mV peak-to-peak.<br>
+                <strong>Dynamic range: </strong>500 mV to 40 V peak-to-peak.<br>
+                <strong>LSD: </strong>1 ns (100 ps using 100 GATE AVERAGE).<br>
+                <strong>Resolution: </strong>&pm; LSD &pm; Start Trigger Error &pm; Stop Trigger Error &pm; 1 ns rms.<br>
+            </p>
+            <h3 class="squat">Read Peak Amplitudes</h3>
+            <p class="squat">
+                Maximum and minimum peaks of Channel A or Channel B input are displayed.<br>
+                <strong>Frequency range: </strong>DC, 100 Hz to 20 MHz.<br>
+                <strong>Dynamic range: </strong>0 V to 40 V peak-to-peak.<br>
+                <strong>Resolution: </strong>&times;1: 20 mV. &times;10: 100 mV.
+            </p>
+            <h3 class="squat">Time Base</h3>
+            <p class="squat">
+                <strong>Standard Crystal</strong><br>
+                <strong>Frequency: </strong>10 Mhz.<br>
+                <strong>Aging rate: </strong>&lt;3 &times; 10<sup>&minus;7</sup> per month.<br>
+                <strong>Temperature: </strong>&lt;5 &times; 10<sup>&minus;6</sup> to 50&deg;C.<br>
+                <strong>Line voltage: </strong>&lt;1 &times; 10<sup>&minus;7</sup> for 10 % change.<br>
+                <strong>External input: </strong>rear panel BNC accepts 10 MHz, 500 mV to 5 V rms.<br>
+                <strong>Time base output: </strong>10 MHz, &gt;500 mV rms sine wave into 50 &ohm; via rear panel.<br>
+                <strong>Gate time range: </strong>1 ms to 99.999 seconds in 1 ms increments.<br>
+            </p>
+        </div>
+        <div class="div2">
+            <h3 class="squat">Store / Recall</h3>
+            <p class="squat tab">
+                Up to ten instrument setups includding trigger levels may be stored in a nonvolatile memory and 
+                conveniently recalled. Sequencing through several complicated setups require much less time and
+                results in repeatable, exact measurement setups.
+            </p>
+            <h3 class="squat">Math</h3>
+            <p class="squat tab">
+                Math functions let you view results in measurement units of your choice such as velocity, flow,
+                or ppm. Normalize divides the measured value by a constant. Offset adds or subtracts the measured
+                value by a constant.
+            </p>
+            <h3 class="squat">External Arming</h3>
+            <p class="squat tab">
+                Synchronize a measurement to a real time event or events. Start arm is used alone to enable the
+                start of a measurement, stop arm to enable the stop of a measurement. External gating is acomplished
+                by arming both the start and stop of a measurement. This capability facilitates applications such as
+                measuring the frequency within a pulsed RF signal and averaging for increased resolution, selecting a
+                specific time interval within a pulse train, and selecting a portion of a pulse train to totalize.
+            </p>
+            <p class="squat tab">
+                The arm input and slope selection are conveniently located on the front panel and are programmable over
+                HP-IB. The trigger level at which the arm signal will arm a measurement may be selected from &minus;4 V to &plus;4 V
+                via a rear panel control.
+            </p>
+            <h2 class="squat" style="font-size: 22px;">Condensed Specifications</h2>
+            <h3 class="squat">Input Characteristics (channels A and B)</h3>
+            <p class="squat">
+                <strong>Range</strong><br>
+                <strong class="indent">DC coupled: </strong>0 to 100 MHz.<br>
+                <strong class="indent">AC coupled: </strong>1 M&ohm;, 30 Hz to 100 MHz. 50 &ohm;, 1 MHz to 100 MHz.<br>
+                <strong>Sensitivity</strong><br>
+                15 mV rms sine wave to 20 MHz. 35 mV rms sine wave to 100MHz. 100 mV peak-to-peak at a minimum pulse width 
+                of 5 ns. Sensitivity can be continuously varied to 150 mV rms, (NOMINAL) using the TRIGGER LEVEL/SENS control 
+                in sensitivity mode. (Trigger levels set to 0 V NOMINAL.)<br>
+                <strong>Dynamic Range (&times;1)</strong><br>
+                45 mV to 5 V peak-to-peak, to 20 MHz.<br>
+                100 mV to 2.5 V peak-to-peak, to 100 MHz.<br>
+                <strong>Signal operating range, dc: </strong>&pm;5 V DC (&times; ATTN).<br>
+                <strong>Trigger Level Range</strong><br>
+                <strong class="indent">Manual (auto trigger off): </strong>continuously adjustable over &pm;5.1 V, displayed 
+                in 20 mV steps. In &times;10, &pm;51 V displayed in 200 mV steps.<br>
+                <strong class="indent">Preset: </strong>0 V NOMINAL in Sensitivity Mode.
+                <strong>Auto Trigger</strong><br>
+                <strong class="indent">DC coupled: </strong>100 Hz to 100 MHz.<br>
+                <strong class="indent">AC coupled: </strong>1 M&ohm;, 100 Hz to 100 MHz. 50 &ohm;, 1 MHz to 100 MHz.<br>
+                <strong>Coupling: </strong>ac or dc, switch selectable.<br>
+                <strong>Trigger slope: </strong>independent selection of &plus; or &minus; slope.<br>
+                <strong>Impedance: </strong>1 M&ohm; NOMINAL shunted by &lt;60 pf or 50 &ohm; NOMINAL switch selectable.<br>
+                <strong>Attenuator</strong><br>
+                <strong class="indent">Manual: </strong>&times;1 or &times;10 NOMINAL, switch selectable.<br>
+                <strong class="indent">Auto: </strong> attenuator automatically switched when in Auto Trigger.<br>
+                <strong>Low pass filter: </strong> 100 kHz NOMINAL, switchable in or out of Channel A.<br>
+            </p>
+            <h3 class="squat">Math</h3>
+            <p class="squat">
+                <strong class="indent">Display = </strong>(Measurement/Normalize) &plus; Offset.<br>
+                <strong class="indent">Entry range: </strong>&pm; 1 &times; 10<sup>&minus;10</sup> to &pm; 9.99999999999 &times; 10<sup>9</sup>.<br>
+                <strong>Single cycle: </strong>when enabled, one measurement is taken with each push of RESET key.<br>
+                <strong>100 gate average: </strong>100 gates accumulated and average displayed.<br>
+                <strong>Gate output: </strong> rear panel BNC drives TTL levels into 1 k&ohm;.<br>
+            </p>
+            <h3 class="squat">Hewlett-Packard Interface Bus</h3>
+            <p class="squat">
+                <strong>Programmable controls: </strong>all front panel controls and functions, expect Option 030 Channel C sensitivity and power on/stby switch.<br>
+                <strong>Trigger Level: </strong>set Channel A or B from &minus;5.1 V to &plus;5.1 V in 20 mV steps (&times; ATTN).<br>
+                <strong>Other: </strong>Initialize, Transmit Error, High-Speed Output, Transmit Calibration Data, Device ID, and SRQ Mask.<br>
+                <strong>Data Output</strong><br>
+                <strong class="indent">Normal operation: </strong>format: 19 characters plus CR and LF. Rate: Ten readings/second.<br>
+                <strong class="indent">High speed output mode: </strong>format: 8 bytes of count data and Interpolator Start and Stop counts. Rate: 150 readings/second.
+            </p>
+            <h3 class="squat">Options</h3>
+            <p class="squat">
+                <strong>Option 010 High Stability Time Base (Oven)</strong><br>
+                <strong>Frequency: </strong>10 MHz.<br>
+                <strong>Aging rate: </strong>&lt;5 &times; 10<sup>&minus;10</sup>/day after 24-hour warm up.<br>
+                <strong>Short term: </strong>&lt;5 &times; 10<sup>&minus;10</sup> rms for a 1-second average.<br>
+                <strong>Temperature: </strong>&lt;7 &times; 10<sup>&minus;9</sup>, 0 to 50&deg;C.
+                <strong>Line voltage: </strong>&lt;5 &times; 10<sup>&minus;10</sup> for 10% change (2 minutes after change).<br>
+                <strong>Warm up: </strong>within 5 &times; 10<sup>&minus;9</sup> of final value in 20 minutes.<br>
+                <strong>Option 020 DC Digital Voltmeter</strong><br>
+                <strong>Range: </strong>4 digits, autoranging, and autopolarity in &pm; 10 V, &pm; 100 V, &pm; 1000 V ranges.<br>
+                <strong>Sensitivity and LSD: </strong> 100 &micro;V for &pm; 1 V reading. 1 mV for &pm; 10 V reading. 10 mV for &pm; 100 V reading. 100 mV for &pm; 1000 V reading.<br>
+                <strong>Input type: </strong>floating pair.<br>
+                <strong>Input resistance: </strong>10 M&ohm; &pm; 1%.<br>
+                <strong>Option 030 1300 MHz C Channel</strong><br>
+                <strong>Range: </strong>90 MHz to 1300 MHz.<br>
+                <strong>Sensitivity: </strong> 15 mV rms (&minus;23.5 dBm) sine wave, 90 MHz to 1000 MHz. 75 mV rms (&minus;9.5 dBm) sine wave, 1000 MHz to 1300 Mhz.
+            </p>
+            <table style="max-width: 100%;">
+                <td width="400px" style="vertical-align: top;">
+                    <h3 class="squat">Ordering Information</h3>
+                    <p class="squat">
+                        <strong>Option 010: </strong>Oven Oscillator<br>
+                        <strong>Option 020: </strong>DVM<br>
+                        <strong>Option 030: </strong>Channel C<br>
+                        <strong>Option 050: </strong>Both option 020 and 030, order instead of both options separately.<br>
+                        <strong>Option 060: </strong>Rear Terminals<br>
+                        Channel A, B and ARM in parallel with front inputs.<br>
+                        Options 020 and 030 at rear panel only.<br>
+                        <strong>Option 908: </strong>Rack Mount Kit for use without front handles.<br>
+                        <strong>Option 913: </strong>Rack Mount Kit for use with supplied front handles.<br>
+                        <h3 class="squat">5334A Universal Counter</h3>
+                    </p>
+                </td>
+                <td width="100px" align="right" style="vertical-align: top;">
+                    <h3 class="squat">Prices</h3>
+                    <p class="squat">
+                        $805<br>
+                        $500<br>
+                        $755<br>
+                        $1240<br>
+                        <br>
+                        $100<br>
+                        <br>
+                        <br>
+                        $30<br>
+                        $30<br>
+                        <br>
+                        <h3 class="squat">$2800</h3>
+                    </p>
+                </td>
+            </table>
+        </div>
+    </div>
 
     <h2 class="squat">Manuals & Resources</h2>
     <ul class="squat">
