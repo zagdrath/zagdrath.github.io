@@ -1,4 +1,4 @@
-* {
+html {
     line-height: 1.1;
 }
 
@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 sup {
     vertical-align: 0;
     position: relative;
@@ -29,6 +33,23 @@ sub {
     top: 0.8ex;
 }
 
+/* Nested counter styles */
+
+ul.count, ol.count {
+    counter-reset: item;
+}
+
+.count li {
+    display: block;
+}
+
+.count li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item;
+}
+
+/* Indent styles */
+
 .tab {
     text-indent: 20px;
 }
@@ -36,6 +57,8 @@ sub {
 .indent {
     margin-left: 20px;
 }
+
+/* Headbox styles */
 
 .headbox {
     border: groove;
@@ -61,14 +84,18 @@ sub {
     margin-bottom: 0.4em;
 }
 
+/* Squat styles */
+
 p.squat {
     margin-top: 0.25em;
     margin-bottom: 0.15em;
+    line-height: 1.1;
 }
 
 ul.squat {
     margin-top: 0.25em;
     margin-bottom: 0.15em;
+    line-height: 1.5em;
 }
 
 ol.squat {
@@ -96,6 +123,8 @@ h5.squat {
     margin-top: 0.17em;
     margin-bottom: 0.15em;
 }
+
+/* Grid styles */
 
 .parent {
     display: grid;
