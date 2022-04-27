@@ -71,6 +71,12 @@ ul.squat {
     margin-bottom: 0.15em;
 }
 
+ol.squat {
+    margin-top: 0.25em;
+    margin-bottom: 0.15em;
+    line-height: 1.5em;
+}
+
 h2.squat {
     margin-top: 0.4em;
     margin-bottom: 0.25em;
