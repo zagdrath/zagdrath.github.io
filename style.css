@@ -59,11 +59,11 @@ ul.count, ol.count {
 /* Indent styles */
 
 .tab {
-    text-indent: 20px;
+    text-indent: 35px;
 }
 
 .indent {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 /* Headbox styles */
