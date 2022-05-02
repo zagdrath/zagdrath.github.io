@@ -1,0 +1,36 @@
+/* General styles */
+
+body {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+/* Caption styles */
+
+.caption {
+    margin-right: 250px;
+}
+
+/* Button styles */
+
+.normalize {
+    background: none;
+    padding: 0;
+    border: 0;
+}
+
+/* Nested counter styles */
+
+ul.count,
+ol.count {
+    counter-reset: item;
+}
+
+.count li {
+    display: block;
+}
+
+.count li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item;
+}

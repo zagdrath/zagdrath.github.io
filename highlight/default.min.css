@@ -12,7 +12,6 @@ pre code.hljs {
   overflow-x: auto;
   padding: 1em;
   width: 65em;
-  border-left: groove 2px;
 }
 
 code.hljs {
@@ -20,7 +19,6 @@ code.hljs {
 }
 
 .hljs {
-  background: #ffd;
   color: #444
 }
 
