@@ -1,13 +1,13 @@
 /* General styles */
 
 body {
-    background-image: url(./images/bg.gif);
+    background-image: url(./assets/images/bg.gif);
     margin-left: 3%;
     margin-right: 3%;
 }
 
 ul {
-    list-style-image: url(./images/redball.gif);
+    list-style-image: url(./assets/images/redball.gif);
 }
 
 a {
