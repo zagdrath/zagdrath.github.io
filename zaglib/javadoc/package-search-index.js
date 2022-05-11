@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"xyz.zagdrath.zaglib.math"},{"l":"xyz.zagdrath.zaglib.vision"}]
