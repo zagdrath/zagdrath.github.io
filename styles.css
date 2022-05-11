@@ -1,0 +1,19 @@
+/* General styles */
+
+body {
+    background-image: url(./images/bg.gif);
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+ul {
+    list-style-image: url(./images/redball.gif);
+}
+
+a {
+    color: #b60032;
+}
+
+a:visited {
+    color: #505050;
+}
