@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to PID</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+</head>
+<body>
+    <h1>Introduction to PID</h1>
+    <p>
+        A PID controller is a control loop mechanism employing feedback that is commonly used in industrial control
+        systems and a variety of other applications. A PID controller continuously calculated an error value \(e(t)\)
+        which is the difference between the desired setpoint \(r(t)\) and the currently measured process variable \(y
+        (t)\) and it applies a correction based off of the proportional, integral, and derivative terms, hence the
+        naming of PID.
+    </p>
+    <p>
+        The calculation of error is defined as the desired setpoint \(r(t)\) minus the currently measured process
+        variable \(y(t)\), see Figure 1 below.
+    </p>
+    <figure>
+        \(\displaystyle {\large e(t)=r(t)-y(t)}\)
+        <figcaption>Figure 1</figcaption>
+    </figure>
+    <h2>Controller Theory</h2>
+    <h3>Proportional Term</h3>
+    <p>
+        The proportional term produces the controller output \(u(t)\) which is proportional to the current error value
+        \(e(t)\).The proportional control response is adjusted by multiplying the error value \(e(t)\) by the
+        proportional gain constant \(K_p\), see Figure 2 below for the equation that proportional control performs.
+    </p>
+    <figure>
+        \(\displaystyle {\large u(t)=K_pe(t)}\)
+        <figcaption>Figure 2</figcaption>
+    </figure>
+    <button class="normalize" onclick="history.back()"><img src="../../assets/images/back.gif" alt="Go back"></button>
+    <hr>
+    <address>
+        Cody L. Wellman <a href="mailto:zagdrath@member.fsf.org">&lt;zagdrath@member.fsf.org&gt;</a><br>
+        Last Modified:
+        <script>document.write(document.lastModified);</script> EST
+    </address>
+</body>
+</html>

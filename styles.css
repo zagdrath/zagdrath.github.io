@@ -14,6 +14,30 @@ a {
     color: #b60032;
 }
 
-a:visited {
+a:hover {
     color: #505050;
+}
+
+/* Button styles */
+
+.normalize {
+    background: none;
+    padding: 0;
+    border: 0;
+}
+
+/* Nested counter styles */
+
+ul.count,
+ol.count {
+    counter-reset: item;
+}
+
+.count li {
+    display: block;
+}
+
+.count li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item;
 }
