@@ -10,8 +10,14 @@
 pre code.hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em;
+  padding: 0;
+  padding-left: 1em;
+  padding-right: 1em;
   width: 65em;
+}
+
+pre {
+  margin: 0;
 }
 
 code.hljs {
