@@ -31,6 +31,10 @@ h6 {
     color: #b60032;
 }
 
+ul {
+    line-height: 1.3;
+}
+
 /* Button styles */
 
 .normalize {
