@@ -20,6 +20,11 @@ a:hover {
     color: #505050;
 }
 
+p {
+    word-break: break-word;
+    hyphens: auto;
+}
+
 h1,
 h2,
 h3,
