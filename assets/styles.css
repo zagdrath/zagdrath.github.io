@@ -1,0 +1,89 @@
+body {
+    margin: 21.44px;
+    width: 700px;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+p {
+    word-break: break-word;
+    hyphens: auto;
+}
+
+pre {
+    padding: 0 0 0 25px;
+}
+
+.left-column {
+    float: left;
+    display: block;
+    width: 400px;
+}
+
+.right-column {
+    float: right;
+    display: block;
+    width: 250px;
+}
+
+.aboutme ul {
+    padding: 0 20px 0 20px;
+    list-style-type: none;
+}
+
+.aboutme-content {
+    text-align: center;
+    margin: 0 0 2em 0;
+}
+
+.photo {
+    margin: 0 auto 0 auto;
+}
+
+.interests ul {
+    text-align: center;
+    margin: 0;
+    padding: 0 20px 0 20px;
+}
+
+.interests li {
+    display: inline;
+    padding: 0 3px 0 0;
+    list-style-type: none;
+}
+
+.elsewhere li {
+    display: block;
+    padding: 0 0 0 22px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin: 5px;
+    list-style-type: none;
+}
+
+.elsewhere .github {
+    background-image: url(./img/elsewhere/github.svg);
+    width: 16px;
+    height: 16px;
+}
+
+.elsewhere .twitter {
+    background-image: url(./img/elsewhere/twitter.svg);
+    width: 16px;
+    height: 16px;
+}
+
+.buttons {
+    text-align: center;
+    padding: 60px 20px 20px 20px;
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.column-clear {
+    clear: both;
+}
