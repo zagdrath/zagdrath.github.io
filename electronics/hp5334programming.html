@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HP 5334A/B Programming Commands</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>HP 5334A/B Programming Commands</h2>
+    <p>
+        All local functions are programmable with individual command codes via the
+        interface. In general, all functions operate the same in remote as in local.
+        The HP 5334A/B device commands are described in the following paragraphs, and
+        listed in Table 1-1, HP 5334A/B Programming Command Set. The individual commands
+        are organized into groups for ease of description and use.
+    </p>
+    <p>
+        Most of the alpha characters, used to represent each function in the command set,
+        are underlined on the front panel of the counter. For example, in the MATH/MEMORY
+        group the "M" for the group label, and the "D" for DISABLE are underlined; the alpha
+        character set for Math Disable is MD.
+    </p>
+    <h3>Command Group Descriptions</h3>
+    <p>
+        INPUT GROUP. Most commands in the input group are equivalent to pressing a key, or a
+        sequence of keys on the HP 5334A/B front panel, when the counter is in the local mode
+        of operation. The binary commands in this group are equivalent to a single key stroke,
+        and set the corresponding parameter to "ON" (1), or "OFF" (0). Numeric commands, AT
+        and BT, require a numeric entry that sets the corresponding trigger level to a specific
+        voltage. Integer commands, XA and XO, are equivalent to the local EXT ARM SELECT KEY
+        sequence.
+    </p>
+    <p>
+        FUNCTION/DATA GROUP. All commands in the function/data group represent a corresponding
+        HP 5334A/B front panel key. All function (FNn or FUn) commands are integer commands
+        that require a numeric entry after the alpha characters. The "n" represents the number
+        equivalent to the function selected, as listed in Table 1-1. When a function command is
+        recieved it enabled the corresponding measurement mode. To disable a measurement mode,
+        another function command must be sent.
+    </p>
+    <p>
+        GATE GROUP. Commands in the gate group are equivalent to pressing a key or a sequence of
+        keys, on the HP 5334A/B front panel, when the instrument is in the local mode. The GS and
+        GV commands, equivalent to a single key stroke, are bindary commands that set the corresponding
+        parameter to "ON" (1), or "OFF" (0). Numeric commands, GA, require a numeric entry that
+        sets the gate time to a specified value.
+    </p>
+    <p>
+        MATH/MEMORY GROUP. Commands in the math/memory group are equivalent to pressing a key or
+        a sequence of keys, on the HP 5334A/B front panel, in the local mode of operation. The MD
+        command, equivalent to a single key stroke, is a binary command that sets the corresponding
+        parameter to "ON" (1), or "OFF" (0). Numeric commands, MN and MO, require a numeric entry
+        that sets the corresponding math operation to a specific value. Integer commands, MR and MS,
+        are equivalent to the local STORE and RECALL key sequences. (The MR and MS commands are not
+        valid for the HP 5334B.)
+    </p>
+    <h3>Miscellaneous and Special Functions</h3>
+    <p>
+        HS1 (High Speed Output Mode On): High speed mode sends the HP 5334A/B measurement data to
+        the counter in binary form. The data is sent in 8 bytes, terminated by an EOI with the last
+        byte. In this mode the counter is capable of sending measurement data at the rate of 150
+        measurements per second. When the HS1 command is sent, it palces the HP 5334A/B in the high
+        speed output mode. The coutner displays the message "FASt dAtA" while high speed measurements
+        are being taken.
+    </p>
+    <p>
+        HS0 (High Speed Output Mode Off): The HS0 command takes the counter out of the high speed
+        output mode and allows it to function in the normal remote state.
+    </p>
+    <p>
+        ID (Device Identification): When the ID command is sent, the counter will identify itself
+        to the controller the next time the counter is addressed to talk. The string "HP 5334A/B"
+        will be sent, followed by a cariage return and a line feed. The coutner will wait until
+        the device ID is read by the controller, then resume taking measurements.
+    </p>
+    <p>
+        IN (Initialize): The IN command causes the instrument to exit its current state and go to
+        the power-on initalized state. If the instrument is in an error state, error conditions
+        1.0 through 4.4 will be cleared by the "IN" command, however, errors 5.0X through 5.2
+        and failures will not be cleared.
+    </p>
+    <p>
+        The initalized states are set as follows: All gate, math/memory, and input signal conditioning
+        will be OFF; the function will be FREQ A (FN1), with AUTO TRIG (AU1) and autoattenuation ON;
+        gate time will be set at 300 milliseconds; math offset value will be set at +0, normalize value
+        at +1; the input A (AT) and input B (BT) trigger levels wil be set at 0 volts, and the internal
+        trigger/sensitivity levels will be OFF (dACS OFF).
+    </p>
+    <p>
+        RE (Reset): The reset command clears the current measurement and restarts a new measurement.
+        However, unlike the REST/LOCAL key, the RE command does NOT clear errors 5.0X through 5.2,
+        nor any failures.
+    </p>
+    <p>
+        SMn (Service Request Mask): Upon receipt of the Service Request Mask Command (SMn), the
+        instrument will load the binary value of "n" into the service request mask register. The
+        "n" represents the binary sum of the bits (conditions) you want enabled.
+    </p>
+    <p>
+        SM0 (Service Request Mask Off): Sending the command "SM0" masks off (or disables) all SRQ
+        conditions. Then this command is sent no condition will enable a service request.
+    </p>
+    <p>
+        TC (Transmit Calibration Data): When the controller sends the TC command, the counter sends
+        a string of calibration data, preceded by a "C", and followed by a carriage return and a
+        line feed. The counter will wait until the calibration data is read, then resume taking
+        measurements.
+    </p>
+    <p>
+        TE (Transmit Error): When the transmit error command is recieved, the instrument will send
+        the number of the detected error to the controller. The TE command clears the Error bit
+        (bit 2) in the counter's serial poll byte. It is recommended that "TE" be send in a string
+        by itself, not at the end of another string. The counter will discontinue normal operation
+        until the error message is read. Not that reading the error code will not clear the error.
+    </p>
+    <p>
+        WA1 (Wait To be Addressed Mode On): WA1 palces the instrument in the wait to be dddressed
+        Mode. The wait to be addressed mode forces the instrument to suspend subsequent measurements,
+        and wait for the current measurement to be read by the controller. This mode is especially
+        useful when used with the service request. The instrument will make a measurement, then
+        alert the controller that data is ready by asserting SRQ when the measurement is completed.
+        This frees the controller to perform other functions while the measurement is available.
+    </p>
+    <p>
+        WA0 (Wait To Be Addressed Mode Off): WA0 takes the isntrument out of the wait to be addressed
+        mode, and allows it to function in the normal remote state. In the normal state, measurements
+        are made continously, whether or not they are read by the controller.
+    </p>
+    <table class="command-table">
+        <caption>Table 1-1. HP 5334A/B Programming Command Set</caption>
+        <tr>
+            <th>COMMAND<br>GROUP</th>
+            <th>EQUIVALENT<br>KEY/CONTROL</th>
+            <th>MNEMONIC</th>
+            <th>DESCRIPTION</th>
+        </tr>
+        <tr>
+            <td>INPUT</td>
+            <td>AC</td>
+            <td>AA0<br>AA1</td>
+            <td>Set Input A Coupling to DC<br>Set Input A Coupling to AC</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>SLOPE</td>
+            <td>AS0<br>AS1</td>
+            <td>Set Input A Slope to positive<br>Set Input A Slope to negative</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TRIGGER<br>LEVEL/SENS</td>
+            <td>AT&lt;num&gt;</td>
+            <td>Set Channel A Trigger Level &lt;value&gt;</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>AUTO TRIG</td>
+            <td>AU0<br>AU1</td>
+            <td>Set AUTO TRIG Off<br>Set AUTO TRIG On</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X10 ATTN</td>
+            <td>AX0<br>AX1</td>
+            <td>Set Input A Attenuation to X1<br>Set Input A Attenuation to X10</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>50&ohm; Z</td>
+            <td>AZ0<br>AZ1</td>
+            <td>Set Input A Impedance to 1M-ohm<br>Set Input A Impedance to 50-ohm</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>AC</td>
+            <td>BA0<br>BA1</td>
+            <td>Set Input B Coupling to DC<br>Set Input B Coupling to AC</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>SLOPE</td>
+            <td>BS0<br>BS1</td>
+            <td>Set Input B Slope to positive<br>Set Input B Slope to negative</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TRIGGER<br>LEVEL/SENS</td>
+            <td>BT&lt;num&gt;</td>
+            <td>Set Channel B Trigger Level &lt;value&gt;</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>X10 ATTN</td>
+            <td>BX0<br>BX1</td>
+            <td>Set Input B Attenuation to X1<br>Set Input B Attenuation to X10</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>50&ohm; Z</td>
+            <td>BZ0<br>BZ1</td>
+            <td>Set Input B Impedance to 1M-ohm<br>Set Input B Impedance to 50-ohm</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>COM A</td>
+            <td>CC0<br>CC1</td>
+            <td>Set COMMON inputs off<br>Set COMMON inputs on</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>100 kHz<br>FILTER A</td>
+            <td>FI0<br>FI1</td>
+            <td>Set Input A Filter off<br>Set Input A Filter on</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>SENS</td>
+            <td>SE0<br>SE1</td>
+            <td>Set Sensitivity Mode Off<br>Set Sensitivity Mode On</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>dACS OFF (5334A)<br>dACS ON (5334A)</td>
+            <td>TR0<br>TR1</td>
+            <td>
+                Set Remote Trigger/Sensitivity Levels Off<br>
+                Set Remote Trigger/Sensitivity Levels On
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>START ARM</td>
+            <td>XA1<br>XA2<br>XA3</td>
+            <td>
+                Set External Start Arm Slope to positive<br>Set External Start Arm Off<br>
+                Set External Start Arm Slope to negative
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>STOP ARM</td>
+            <td>XO1<br>XO2<br>XO3</td>
+            <td>
+                Set External Stop Arm Slope to positive<br>
+                Set External Stop Arm Off<br>
+                Set External Stop Arm Slope to negative
+            </td>
+        </tr>
+        <tr>
+            <td>FUNCTION/<br>DATA</td>
+            <td>FREQ A</td>
+            <td>FN1</td>
+            <td>Frequency A</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>FREQ B</td>
+            <td>FN2</td>
+            <td>Frequency B</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>FREQ C</td>
+            <td>FN3</td>
+            <td>Frequency C</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>PERIOD A</td>
+            <td>FN4</td>
+            <td>Period A</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>T.I. A&#8594;B</td>
+            <td>FN5</td>
+            <td>Time Interval A to B</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>T.I. A&#8594;B<br>[DELAY]</td>
+            <td>FN6</td>
+            <td>Time Interval A to B with delay</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>RATIO A/B</td>
+            <td>FN7</td>
+            <td>Ratio A/B</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TOT STOP A</td>
+            <td>FN8</td>
+            <td>Totalize Stop A</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>TOT START A</td>
+            <td>FN9</td>
+            <td>Totalize Start A</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>PULSE<br>WIDTH A</td>
+            <td>FN10</td>
+            <td>Pulse Width A</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>RISE/FALL<br>TIME A</td>
+            <td>FN11</td>
+            <td>Rise/Fall Time A</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>DVM</td>
+            <td>FN12</td>
+            <td>Voltage Mode</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>READ TRIG<br>LEVELS</td>
+            <td>FN13</td>
+            <td>Read A and B Channel Trigger Levels</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>READ PEAKS A</td>
+            <td>FN14</td>
+            <td>Read Channel A &PlusMinus; Peaks</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>READ PEAKS B</td>
+            <td>FN15</td>
+            <td>Read Channel B &PlusMinus; Peaks</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>FU1-FU15</td>
+            <td>SAME AS FN1 through FN15</td>
+        </tr>
+        <tr>
+            <td>GATE</td>
+            <td>GATE TIME<br>[DELAY]</td>
+            <td>GA&lt;num&gt;</td>
+            <td>Set Gate Time &lt;value&gt;<br>Gate time range is 0.001 to 99.999s.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>SINGLE<br>CYCLE</td>
+            <td>GS0<br>GS1</td>
+            <td>Set Single Gate Cycle Off<br>Set Single Gate Cycle On</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>100-GATE<br>AVERAGE</td>
+            <td>GV0<br>GV1</td>
+            <td>Set 100-Gate Average Off<br>Set 100-Gate Average On</td>
+        </tr>
+        <tr>
+            <td>MATH/<br>MEMORY<br>(5334A)</td>
+            <td>DISABLE</td>
+            <td>MD0<br>MD1</td>
+            <td>Set Math Disable Off<br>Set Math Disable On</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>NORMALIZE</td>
+            <td>MN&lt;num&gt;</td>
+            <td>
+                Set Normalize &lt;value&gt;<br>
+                Value Range is &PlusMinus;1E-10 to &PlusMinus;9.999-999E+9<br>
+                (zero is disallowed)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>OFFSET</td>
+            <td>MO&lt;num&gt;</td>
+            <td>
+                Set Offset &lt;value&gt;<br>
+                Value Range is &PlusMinus;1E-10 to &PlusMinus;9.999-999E+9<br>
+                (zero is allowed)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>RECALL (5334A)</td>
+            <td>MR0-MR9</td>
+            <td>Recall Setup from Register &lt;0-9&gt;</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>STORE (5334A)</td>
+            <td>MS0-MS9</td>
+            <td>Store Setup from Register &lt;0-9&gt;</td>
+        </tr>
+        <tr>
+            <td>MISC AND<br>SPECIAL<br>FUNCTION</td>
+            <td>none</td>
+            <td>HS0<br>HS1</td>
+            <td>High Speed Output Mode Off<br>High Speed Output Mode On</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>none</td>
+            <td>ID</td>
+            <td>Device Identification</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>POWER-ON</td>
+            <td>IN</td>
+            <td>Initalize</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>none</td>
+            <td>RE</td>
+            <td>Reset</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>none</td>
+            <td>SM&lt;num&gt;</td>
+            <td>Set SRQ Mask (Refer to Status Byte)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>none</td>
+            <td>TC</td>
+            <td>Transmit Calibration Data</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>none</td>
+            <td>TE</td>
+            <td>Transmit Error (Refer to Error Handling)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>none</td>
+            <td>WA0<br>WA1</td>
+            <td>Wait To Be Addressed Mode Off<br>Wait To Be Addressed Mode On</td>
+        </tr>
+    </table>
+</body>
+</html>
